@@ -16,11 +16,20 @@ form
                     accum[item.name] = item.value;
                     return accum;
                 }, {})
+
                 console.log(inpData);
                 event.target.reset();
+                createElement(inpData);
             
         })
 
+function createElement(elementData) {
+   const div = document.createElement('div');
+   div.classList.add('data');
+   div.innerHTML = JSON.stringify(elementData);
+   
+   document.querySelector('.vueData').append(div);
+}
 
 
 

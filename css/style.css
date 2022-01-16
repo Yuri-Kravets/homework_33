@@ -7,6 +7,12 @@ body {
     outline: 1px solid black;
     border-radius: 5px;
     padding: 10px;
-    width: 70%;
+    display: inline-block;
     
 }
+.vueData {
+    border: 1px solid red;
+    display:inline-block;
+    border-radius: 5px;
+    
+} 
