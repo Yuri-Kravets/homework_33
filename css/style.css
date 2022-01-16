@@ -16,3 +16,6 @@ body {
     border-radius: 5px;
     
 } 
+.val:focus {
+    background-color: red;
+}
