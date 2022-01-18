@@ -6,8 +6,10 @@ body {
 .myForm {
     outline: 1px solid black;
     border-radius: 5px;
+    width: 550px;
     padding: 10px;
-    display: inline-block;
+    margin: 0 auto;
+ 
     
 }
 .vueData {
@@ -17,6 +19,11 @@ body {
     
 } 
 .bgcolor {
-    background-color: red;
+    background-color: pink;
 } 
-
+.valid {
+    background-color: green;
+}
+.invalid {
+    background-color: red;
+}

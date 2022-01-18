@@ -3,24 +3,18 @@
 
 const form = document.querySelector('#form');
 
-let inputData = form.querySelector('.bgcolor');
+//let inputData = form.querySelector('.bgcolor');
 
 // if (inputData.value ==='') {
 //     inputData.style.backgroundColor = 'red';
 // } else {
 //     inputData.style.backgroundColor = 'white';
 // }
-inputData.onblur = function() {
-    if (inputData.value ==='') {
-        this.classList.add('bgcolor')
-    }  inputData.classList.remove('bgcolor');
-}
-
 
 form
     .addEventListener('submit', event => {
             event.preventDefault();
-            
+            let error = validateForm(form);
             let inpData = Array.from(
                 event.target.querySelectorAll('input, textarea')
             )
@@ -28,7 +22,7 @@ form
                     accum[item.name] = item.value;
                     return accum;
                 }, {})
-            
+                
                 console.log(inpData);
                 event.target.reset();
                 createElement(inpData);
@@ -43,7 +37,15 @@ function createElement(elementData) {
     document.querySelector('.vueData').append(div);
 }
 
+// inputData.onblur = function() {
+//     if (inputData.value ==='') {
+//         this.classList.add('bgcolor')
+//     }  inputData.classList.remove('bgcolor');
+// }
 
+function validateForm (form) {
+
+}
 
 
 
