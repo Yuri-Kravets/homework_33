@@ -25,10 +25,10 @@ form
                 
         })
         
-inputData.addEventListener('keydown',(e) => {
+document.querySelector('#form').addEventListener('keydown',(e) => {
     e.target.classList.remove('error');
 })
-inputData.addEventListener('focusout',({target}) => {
+document.querySelector('#form').addEventListener('focusout',({target}) => {
     if (target.value.trim() === '') {
         target.classList.add('error');
     }
