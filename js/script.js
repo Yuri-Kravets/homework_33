@@ -2,19 +2,15 @@
 (function () {
 
 const form = document.querySelector('#form');
+const inputData = form.querySelector('.inpValue');
 
-//let inputData = form.querySelector('.bgcolor');
-
-// if (inputData.value ==='') {
-//     inputData.style.backgroundColor = 'red';
-// } else {
-//     inputData.style.backgroundColor = 'white';
-// }
 
 form
     .addEventListener('submit', event => {
-            event.preventDefault();
-            let error = validateForm(form);
+        event.preventDefault();
+        
+            
+            
             let inpData = Array.from(
                 event.target.querySelectorAll('input, textarea')
             )
@@ -26,9 +22,20 @@ form
                 console.log(inpData);
                 event.target.reset();
                 createElement(inpData);
-            
+                
         })
         
+inputData.addEventListener('keydown',(e) => {
+    e.target.classList.remove('error');
+})
+inputData.addEventListener('focusout',({target}) => {
+    if (target.value.trim() === '') {
+        target.classList.add('error');
+    }
+})
+
+
+
 function createElement(elementData) {
     const div = document.createElement('div');
     div.classList.add('data');
@@ -43,9 +50,28 @@ function createElement(elementData) {
 //     }  inputData.classList.remove('bgcolor');
 // }
 
-function validateForm (form) {
+// function validateForm (form) {
+//     let error = 0;
+//     let formReq = document.querySelectorAll('_req');
 
-}
+//     for (let i = 0;i < formReq.length;i++) {
+//         const input = formReq[i];
+//         formRemoveError(input);
+//         if (input.classList.contains('_req')) {
+//             formAddError(input);
+//             error++;
+//         }
+//     }
+// }
+// function formAddError(input) {
+//     input.parentElement.classList.add('_error');
+//     input.classList.add('_error');
+// }
+
+// function formRemoveError(input) {
+//     input.parentElement.classList.remove('_error');
+//     input.classList.remove('_error');
+//}
 
 
 

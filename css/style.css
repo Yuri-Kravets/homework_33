@@ -9,6 +9,7 @@ body {
     width: 550px;
     padding: 10px;
     margin: 0 auto;
+    display: inline-block;
  
     
 }
@@ -18,12 +19,13 @@ body {
     border-radius: 5px;
     
 } 
-.bgcolor {
-    background-color: pink;
-} 
-.valid {
-    background-color: green;
+
+.error {
+    background-color: rgb(228, 13, 13);
+    box-shadow: 0 0 20px red; 
 }
-.invalid {
-    background-color: red;
-}
+
+
+
+
+
