@@ -18,10 +18,14 @@ body {
     display:inline-block;
     border-radius: 5px;
     
+    
 } 
-
 
 .error {
     background-color: rgb(228, 13, 13);
     box-shadow: 0 0 20px red; 
+}
+.data {
+    width: 100%;
+    padding: 10px;
 }
