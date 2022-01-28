@@ -10,26 +10,31 @@
 </head>
 <body>
     <div class="container">
-        <div class="vueData">
+        <div class="row">
+          <div class="col-sm col-md-4">
+            <div class="vueData">
+            </div>
+          </div>
+          <div class="col-sm col-md-8">
+            <form id = "form" class ="myForm">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">
+                        Заголовок
+                    </label>
+                    <input type="text" name ="title" class="form-control title required inpValue" id="exampleFormControlInput1" placeholder="Title">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                        Описание
+                    </label>
+                    <textarea class="form-control inpValue" name ="discription" id="exampleFormControlTextarea1" rows="3">
+                    </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>         
         </div>
-        <form id = "form" class ="myForm">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">
-                    Заголовок
-                </label>
-                <input type="text" name ="title" class="form-control title required inpValue" id="exampleFormControlInput1" placeholder="Title">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">
-                    Описание
-                </label>
-                <textarea class="form-control inpValue" name ="discription" id="exampleFormControlTextarea1" rows="3">
-                </textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        
-    </div>  
+      </div>
     <script src = "./js/script.js"></script>
 </body>
 </html>

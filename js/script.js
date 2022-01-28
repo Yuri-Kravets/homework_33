@@ -37,12 +37,20 @@ document.querySelector('#form').addEventListener('focusout',({target}) => {
 
 
 function createElement(elementData) {
-    const div = document.createElement('div');
+    let div = document.createElement('div');
     div.classList.add('data');
     div.innerHTML = JSON.stringify(elementData);
 
     document.querySelector('.vueData').append(div);
+    
 }
+
+
+
+
+
+
+
 
 // inputData.onblur = function() {
 //     if (inputData.value ==='') {

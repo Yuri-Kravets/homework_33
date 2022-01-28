@@ -10,15 +10,11 @@ body {
     padding: 10px;
     margin: 0 auto;
     display: inline-block;
-
-    
+   
 }
-.vueData {
-    border: 1px solid red;
-    display:inline-block;
-    border-radius: 5px;
-    
-    
+
+.vueData {   
+    display:inline-block;     
 } 
 
 .error {
@@ -28,4 +24,8 @@ body {
 .data {
     width: 100%;
     padding: 10px;
+    background-color: grey;
+    border:3px solid aqua;
+    border-radius: 10px;
+    
 }
